@@ -9,17 +9,38 @@ const DEFAULT_DB_PASS = 'password';
 const DEFAULT_DB_NAME = 'db';
 const DEFAULT_DB_TEST = `${DEFAULT_DB_NAME}_test`;
 
+const start = argv => {
+  console.log(argv);
+};
+const stop = argv => {
+  console.log(argv);
+};
+const restart = argv => {
+  console.log(argv);
+};
+const init = argv => {
+  console.log(argv);
+};
+const reset = argv => {
+  console.log(argv);
+};
+
 const yargs = require('yargs');
+const path = require('path');
+
+const APP_ROOT = path.resolve(__dirname);
+const CONFIG_FILE_NAME = '.ezdbrc';
+const CONFIG_FILE_PATH = `${APP_ROOT}/${CONFIG_FILE_NAME}`;
 
 yargs
   .scriptName('ezdb')
   .usage('Usage: $0 <cmd> [options]')
 
-  .command('start', 'start the database')
-  .command('stop', 'stop the database')
-  .command('restart', 'restart the database')
-  .command('init', 'initialize the database')
-  .command('reset', 'reset the database')
+  .command('start', 'start the database', () => {}, start)
+  .command('stop', 'stop the database', () => {}, stop)
+  .command('restart', 'restart the database', () => {}, restart)
+  .command('init', 'initialize the database', () => {}, init)
+  .command('reset', 'reset the database', () => {}, reset)
 
   .option('u', {
     alias: 'username',
@@ -57,6 +78,14 @@ yargs
     alias: 'database',
     describe: 'The database to be used',
     default: DEFAULT_DB,
+    type: 'string',
+    nargs: 1,
+  })
+
+  .option('c', {
+    alias: 'config',
+    describe: 'The path to the configuration file.',
+    default: CONFIG_FILE_PATH,
     type: 'string',
     nargs: 1,
   })
