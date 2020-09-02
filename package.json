@@ -14,14 +14,7 @@
     "type": "git",
     "url": "git+https://github.com/jakechv/ezdb.git"
   },
-  "keywords": [
-    "db",
-    "postgres",
-    "database",
-    "cli",
-    "mysql",
-    "postgresql"
-  ],
+  "keywords": ["db", "postgres", "database", "cli", "mysql", "postgresql"],
   "author": "Jacob Chvatal",
   "license": "MIT",
   "bugs": {
@@ -30,13 +23,12 @@
   "homepage": "https://github.com/jakechv/ezdb#readme",
   "devDependencies": {
     "eslint": "^7.8.1",
+    "eslint-config-airbnb": "18.1.0",
     "eslint-plugin-import": "2.22.0",
-    "eslint-plugin-prettier": "3.1.4",
-    "eslint-plugin-spellcheck": "0.0.17",
     "eslint-plugin-jsx-a11y": "6.3.1",
+    "eslint-plugin-prettier": "3.1.4",
     "eslint-plugin-react": "7.20.6",
     "eslint-plugin-react-hooks": "4.0.8",
-    "eslint-config-airbnb": "18.1.0",
     "prettier": "^2.1.1"
   },
   "dependencies": {
