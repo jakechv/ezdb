@@ -1,0 +1,7 @@
+#+TITLE: EZDB
+
+Starting to work with an existing codebase can be difficult, and the last thing you want to do is worry about your local database configuration.
+
+Different services require different database users, database names, database passwords, etc. to be present in the local environment.
+
+Ezdb is a set of command line tools and configuration options to help those who are newer to projects and their corresponding databases to set up their database development environment instantly.
