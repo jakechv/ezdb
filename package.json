@@ -14,7 +14,14 @@
     "type": "git",
     "url": "git+https://github.com/jakechv/ezdb.git"
   },
-  "keywords": ["db", "postgres", "database", "cli", "mysql", "postgresql"],
+  "keywords": [
+    "db",
+    "postgres",
+    "database",
+    "cli",
+    "mysql",
+    "postgresql"
+  ],
   "author": "Jacob Chvatal",
   "license": "MIT",
   "bugs": {
@@ -22,16 +29,32 @@
   },
   "homepage": "https://github.com/jakechv/ezdb#readme",
   "devDependencies": {
-    "eslint": "^7.8.1",
-    "eslint-config-airbnb": "18.1.0",
-    "eslint-plugin-import": "2.22.0",
-    "eslint-plugin-jsx-a11y": "6.3.1",
+    "eslint": "7.2.0",
+    "eslint-config-airbnb": "18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jsx-a11y": "^6.3.0",
     "eslint-plugin-prettier": "3.1.4",
-    "eslint-plugin-react": "7.20.6",
-    "eslint-plugin-react-hooks": "4.0.8",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "4.0.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.13",
     "prettier": "^2.1.1"
   },
   "dependencies": {
     "yargs": "^15.4.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "eslint --quiet --fix"
+    ],
+    "*.{json,md,html}": [
+      "prettier --write"
+    ]
   }
 }
