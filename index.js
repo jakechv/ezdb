@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 
-// const { exec } = require('child_process');
-
 /* eslint no-unused-expressions: 1 */
 const DEFAULT_DB = 'postgres';
 const DEFAULT_DB_USER = 'username';
@@ -27,6 +25,13 @@ const reset = argv => {
 
 const yargs = require('yargs');
 const path = require('path');
+// const {
+//   startdb,
+//   stopdb,
+//   restartdb,
+//   initdb,
+//   resetdb,
+// } = require('./commands.js');
 
 const APP_ROOT = path.resolve(__dirname);
 const CONFIG_FILE_NAME = '.ezdbrc';
