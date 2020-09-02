@@ -3,6 +3,7 @@
 // const { exec } = require('child_process');
 
 /* eslint no-unused-expressions: 1 */
+const DEFAULT_DB = 'postgres';
 const DEFAULT_DB_USER = 'username';
 const DEFAULT_DB_PASS = 'password';
 const DEFAULT_DB_NAME = 'db';
@@ -36,21 +37,30 @@ yargs
     nargs: 1,
   })
 
-  .option('d', {
-    alias: 'database',
+  .option('dbname', {
+    alias: 'database-name',
     describe: 'The name of the database to be created.',
     default: DEFAULT_DB_NAME,
     type: 'string',
     nargs: 1,
   })
 
-  .option('t', {
-    alias: 'test-database',
+  .option('testdbname', {
+    alias: 'test-database-name',
     describe: 'The name of the test database to be created.',
     default: DEFAULT_DB_TEST,
     type: 'string',
     nargs: 1,
   })
+
+  .option('db', {
+    alias: 'database',
+    describe: 'The database to be used',
+    default: DEFAULT_DB,
+    type: 'string',
+    nargs: 1,
+  })
+
   .help('help')
   .alias('h', 'help')
   .alias('v', 'version')

@@ -5,3 +5,5 @@ Starting to work with an existing codebase can be difficult, and the last thing 
 Different services require different database users, database names, database passwords, etc. to be present in the local environment.
 
 Ezdb is a set of command line tools and configuration options to help those who are newer to projects and their corresponding databases to set up their database development environment instantly.
+
+It currently only plans to support postgresql but can be extended to support other databases in the future.
