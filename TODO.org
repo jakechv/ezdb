@@ -5,3 +5,6 @@
 * TODO start database
 * TODO stop database
 * TODO restart database
+* TODO integrate skira eslint config
+they have good defaults!
+possibly also make a 'jake' eslint config that is similar

@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "username": "username",
+      "password": "password"
+    }
+  ],
+  "databases": [
+    {
+      "name": "db",
+      "users": ["username"],
+      "test-db": true
+    }
+  ],
+  "db-folder": ".postgres",
+  "logfile": "LOG",
+  "db-url": "postgresql:///postgres?host=$PGHOST",
+  "test-db-postfix": "_test"
+}
