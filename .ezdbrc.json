@@ -9,11 +9,11 @@
     {
       "name": "db",
       "users": ["username"],
-      "test-db": true
+      "test": true
     }
   ],
-  "db-folder": ".postgres",
+  "dbDir": ".postgres",
   "logfile": "LOG",
-  "db-url": "postgresql:///postgres?host=$PGHOST",
-  "test-db-postfix": "_test"
+  "dbUrl": "postgresql:///postgres?host=$PGHOST",
+  "testDbPostfix": "_test"
 }
