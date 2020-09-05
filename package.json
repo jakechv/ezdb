@@ -43,6 +43,7 @@
   },
   "dependencies": {
     "cosmiconfig": "^7.0.0",
+    "winston": "^3.3.3",
     "yargs": "^15.4.1"
   },
   "husky": {

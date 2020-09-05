@@ -13,7 +13,7 @@ global.appRoot = path.resolve(__dirname);
 const explorer = cosmiconfigSync('ezdb');
 
 const {
-  startDb, stopDb, setupDb, resetDb,
+  startDb, stopDb, setupDb, resetDb, restartDb,
 } = require('./db');
 
 const { config, filepath, isEmpty } = explorer.search();
@@ -25,7 +25,7 @@ const stop = () => {
   stopDb();
 };
 const restart = () => {
-  startDb(global.appRoot, config.dbDir);
+  restartDb(global.appRoot, config.dbDir);
 };
 const init = () => {
   setupDb(

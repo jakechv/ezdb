@@ -1,4 +1,5 @@
 const { exec } = require('child_process');
+const { logger } = require('./log');
 
 /* Initialize the database engine. */
 const initDb = (appRoot, dbDir) => {
@@ -6,7 +7,7 @@ const initDb = (appRoot, dbDir) => {
   exec(`mkdir -p ${dbLoc}`);
   exec(`initdb ${dbLoc} --auth=trust > /dev/null`, (e) => {
     if (e) {
-      console.log('Could not create the database directory :(');
+      logger.info('Could not create the database directory :(');
     }
   });
 };
