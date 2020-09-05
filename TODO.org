@@ -1,10 +1,13 @@
 #+TITLE: Todo
 
-* TODO create database
-* TODO create user
-* TODO start database
-* TODO stop database
-* TODO restart database
 * TODO integrate skira eslint config
 they have good defaults!
 possibly also make a 'jake' eslint config that is similar
+* TODO default config
+- parameter to generate initial configuration file
+- function to fill in unspecified information with sensible default parameters
+* TODO add tests
+test existing database functions to confirm that they function as desired with a postgres database
+* TODO improve error handling
+error handling could be improved to do more than log that something did not work
+perhaps take other actions to ensure that things are accomplished
